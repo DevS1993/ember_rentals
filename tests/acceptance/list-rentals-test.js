@@ -5,9 +5,11 @@ import {
   currentURL,
   visit
 } from '@ember/test-helpers'
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 
 module('Acceptance | list rentals', function(hooks) {
   setupApplicationTest(hooks);
+  setupMirage(hooks);
 
   test('should show rentals as the home page', async function (assert) {
     await visit('/');
